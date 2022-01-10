@@ -16,7 +16,7 @@ body {
 }
 
 .overlay {
-  background-image: url(/code/images/Frame1.png);
+  background-image: url(/code/images/forHTWIP.png);
   background-repeat: no-repeat;
   background-position: 50% 0%;
   overflow: hidden;
@@ -28,7 +28,71 @@ body {
 .title {
   text-align: center;
   color: #e2e2e2;
-  font-size: 100px;
   font-weight: 900;
+  white-space: nowrap;
+  text-shadow: 2px 5px 4px #000000;
+  /* DIPLOMATA, use VER1
+  transform: scale(.6, 1);
+  font-family: 'Diplomata', cursive;
+  font-size:100px;
+  */
+  /* FI, use VER2
+  transform: scale(0.9, 1);
+  font-family: 'Fascinate Inline', cursive;
+  position: relative;
+  top:-40px;
+  font-size:100px;
+  */
+  /* FRIJOLE, use VER2
+  font-family: 'Frijole', cursive;
+  position: relative;
+  top:-10px;
+  font-size:100px;
+  line-height:110px;
+  transform: scale(1, 1.2);
+  white-space: nowrap;
+  */
+  /* NANUM PEN SCRIPT, use VER2
+  font-family: 'Nanum Pen Script', cursive;
+  transform: scale(1.5, 1.5);
+  line-height: 70px;
+  position: relative;
+  top:110px;
+  font-size:100px;
+  */
+  /* RUSLAN DISPLAY, use VER2 */
+  font-family: 'Ruslan Display', cursive;
+  position: relative;
+  top: -70px;
+  line-height: 120px;
+  font-size: 140px;
+  -webkit-transform: scale(1, 1.1);
+          transform: scale(1, 1.1);
+  /* SNIGLET
+  font-family: 'Sniglet', cursive;
+  font-size:120px;
+  position: relative;
+  top: -120px;
+  */
+  /* SONSIE ONE
+  font-family: 'Sonsie One', cursive;
+  font-size:110px;
+  position: relative;
+  top: -100px;
+  */
+}
+
+.meet p {
+  text-align: center;
+  color: #61c96c;
+  font-weight: 900;
+  white-space: nowrap;
+  /* FRIJOLE, use VER2*/
+  font-family: 'Frijole', cursive;
+  position: relative;
+  font-size: 100px;
+  line-height: 110px;
+  -webkit-transform: scale(1, 1.2);
+          transform: scale(1, 1.2);
 }
 /*# sourceMappingURL=wow.css.map */
