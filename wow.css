@@ -15,18 +15,24 @@ body {
     */
 }
 
-.overlay {
+#overlay {
   background-image: url(images/forHTWIP.png);
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
   background-repeat: no-repeat;
+  background-size: 1920px;
   background-position: 50% 0%;
   overflow: hidden;
-  outline: 2px solid black;
   width: 100%;
   height: 1535px;
 }
 
 .title {
   text-align: center;
+  left: 10px;
   color: #e2e2e2;
   font-weight: 900;
   white-space: nowrap;
@@ -82,7 +88,7 @@ body {
   */
 }
 
-.meet p {
+#meet p {
   text-align: center;
   color: #61c96c;
   font-weight: 900;
@@ -95,4 +101,78 @@ body {
   -webkit-transform: scale(1, 1.2);
           transform: scale(1, 1.2);
 }
+
+@media all and (max-width: 130vh) {
+  #overlay {
+    background-size: 100vw;
+  }
+  .title {
+    font-size: 12vw;
+    line-height: 12vw;
+  }
+}
+
+/*
+body{
+  padding: 0;
+  margin:0;
+}
+
+:root {
+    --ratio: 0.5;
+    --reverse-ratio: 2;
+    --container-width: 50vw;
+    --container-height: 50vh;
+
+    --font1-sizeVW: 15vh;
+    --font1-sizeVH: calc(var(--ratio) * 15vw);
+
+    --font2-sizeVW: 6vh;
+    --font2-sizeVH: calc(var(--ratio) * 6vw);
+}
+
+.one {
+  position: relative;
+  width: 20vw;
+  height: 20vw;
+  background-color: #76ccde;
+  float: left;
+  margin: auto;
+  border-bottom: 1px solid rgb(180,180,180);
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+#span1{
+  font-size: var(--font1-sizeVW); 
+}
+
+.two {
+  width: 25vw;
+  height: 25vw;
+  background-color: #c976de;
+  float: left;
+  margin-left: 10px;
+}
+
+.three {
+  width: 30vw;
+  height: 30vw;
+  background-color: #a7de76;
+  float: left;
+  margin-left: 10px;
+}
+
+//max-width: (reversRatio * 100vh) 
+@media all and (max-width: 200vh) {  
+
+    #container {
+        background-color: green;
+    }
+
+    #span1 {  
+        font-size: var(--font1-sizeVH); 
+    } 
+}
+*/
 /*# sourceMappingURL=wow.css.map */

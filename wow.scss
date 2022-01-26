@@ -1,6 +1,6 @@
 
 body{
-    margin: 0;
+    margin: 0;//allows the overlay div to completely take up the screen by erasing margin
     /*
     background-image: url(/code/images/Frame1.png);
     background-repeat: no-repeat;
@@ -18,18 +18,30 @@ body{
 
 //consider revising after seeing how it looks on different devices
 //look up how to make responsive design??
-.overlay{
+#overlay{
     background-image: url(images/forHTWIP.png);
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
-    overflow: hidden;
-    outline: 2px solid black;
-    width: 100%;
+    image-rendering:pixelated;//gives the background that crispy anti-aliasing
+    background-repeat: no-repeat;//prevents background image from repeating when space is available
+    background-size:1920px;//image has a width of 1920px so this essentially just covers the screen without background-size:cover.
+    //background-size: cover sucks because I don't want the "broad background" to adjust with window resize UNTIL it hits the certain point outlined in the media query below and goes into the "skinny background"
+    //text-align: center;
+    background-position: 50% 0%;//centers image to be at the center of the page even upon resize
+    overflow: hidden;//hides the scrollbar that would ordinarily pop up at the bottom of the screen; for some reason erasing this also makes a white block at the top. dunno why
+    //outline: 2px solid black;
+    width: 100%;//
     height: 1535px;
 }
 
+// @media only screen and (max-width: 700px)
+// {
+//     .overlay{
+//         background-size: cover;
+//     }
+// }
+
 .title{
     text-align:center;
+    left: 10px;
     color: #e2e2e2;
     font-weight: 900;
     white-space: nowrap;
@@ -92,7 +104,7 @@ body{
   */
 }
 
-.meet p{
+#meet p{
     text-align:center;
     color: #61c96c;
     font-weight: 900;
@@ -105,3 +117,81 @@ body{
     line-height:110px;
     transform: scale(1, 1.2);
 }
+
+@media all and (max-width: 130vh) {  
+    // .title {  
+    //     font-size: var(--font1-sizeVH); 
+    // } 
+    #overlay{
+        background-size: 100vw;
+    }
+    .title{
+        font-size:12vw;
+        line-height:12vw;
+    }
+}
+
+//Resize code
+/*
+body{
+  padding: 0;
+  margin:0;
+}
+
+:root {
+    --ratio: 0.5;
+    --reverse-ratio: 2;
+    --container-width: 50vw;
+    --container-height: 50vh;
+
+    --font1-sizeVW: 15vh;
+    --font1-sizeVH: calc(var(--ratio) * 15vw);
+
+    --font2-sizeVW: 6vh;
+    --font2-sizeVH: calc(var(--ratio) * 6vw);
+}
+
+.one {
+  position: relative;
+  width: 20vw;
+  height: 20vw;
+  background-color: #76ccde;
+  float: left;
+  margin: auto;
+  border-bottom: 1px solid rgb(180,180,180);
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+#span1{
+  font-size: var(--font1-sizeVW); 
+}
+
+.two {
+  width: 25vw;
+  height: 25vw;
+  background-color: #c976de;
+  float: left;
+  margin-left: 10px;
+}
+
+.three {
+  width: 30vw;
+  height: 30vw;
+  background-color: #a7de76;
+  float: left;
+  margin-left: 10px;
+}
+
+//max-width: (reversRatio * 100vh) 
+@media all and (max-width: 200vh) {  
+
+    #container {
+        background-color: green;
+    }
+
+    #span1 {  
+        font-size: var(--font1-sizeVH); 
+    } 
+}
+*/
