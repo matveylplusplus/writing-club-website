@@ -1,35 +1,35 @@
 
 body{
-    margin: 0;//allows the overlay div to completely take up the screen by erasing margin
-    /*
-    background-image: url(/code/images/Frame1.png);
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
-    background-size: 60%;
-    background-attachment: scroll;
-    overflow-y: scroll;
-    max-width: 600px;
-    max-height: 800px;
-    height: 100%;
-    margin: 0;
-    overflow-x: hidden;
-    */
+  margin: 0;//allows the overlay div to completely take up the screen by erasing margin
+  /*
+  background-image: url(/code/images/Frame1.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: 60%;
+  background-attachment: scroll;
+  overflow-y: scroll;
+  max-width: 600px;
+  max-height: 800px;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  */
 }
 
 //consider revising after seeing how it looks on different devices
 //look up how to make responsive design??
 #overlay{
-    background-image: url(images/forHTWIP.png);
-    image-rendering:pixelated;//gives the background that crispy anti-aliasing
-    background-repeat: no-repeat;//prevents background image from repeating when space is available
-    background-size:1920px;//image has a width of 1920px so this essentially just covers the screen without background-size:cover.
-    //background-size: cover sucks because I don't want the "broad background" to adjust with window resize UNTIL it hits the certain point outlined in the media query below and goes into the "skinny background"
-    //text-align: center;
-    background-position: 50% 0%;//centers image to be at the center of the page even upon resize
-    overflow: hidden;//hides the scrollbar that would ordinarily pop up at the bottom of the screen; for some reason erasing this also makes a white block at the top. dunno why
-    //outline: 2px solid black;
-    width: 100%;//
-    height: 1535px;
+  background-image: url(images/forHTWIP.png);
+  image-rendering:pixelated;//gives the background that crispy anti-aliasing
+  background-repeat: no-repeat;//prevents background image from repeating when space is available
+  background-size:1920px;//image has a width of 1920px so this essentially just covers the screen without background-size:cover.
+  //background-size: cover sucks because I don't want the "broad background" to adjust with window resize UNTIL it hits the certain point outlined in the media query below and goes into the "skinny background"
+  //text-align: center;
+  background-position: 50% 0%;//centers image to be at the center of the page even upon resize
+  overflow: hidden;//hides the scrollbar that would ordinarily pop up at the bottom of the screen; for some reason erasing this also makes a white block at the top. dunno why
+  //outline: 2px solid black;
+  width: 100%;//Sets width of div to occupy whole screen horizontally speaking; putting this under 100 would leave a blank space and over 100 would create horizontal scrollbars
+  height: 1535px;//set to height of the background image so that scrolling down stops at the bottom of the image and not before or after it 
 }
 
 // @media only screen and (max-width: 700px)
@@ -40,158 +40,159 @@ body{
 // }
 
 .title{
-    text-align:center;
-    left: 10px;
-    color: #e2e2e2;
-    font-weight: 900;
-    white-space: nowrap;
-    text-shadow: 2px 5px 4px #000000;
+  text-align:center;
+  left: 10px;//left offset from the center, just to center it even MORE
+  color: #e2e2e2;
+  font-weight: bolder;//4 options are normal, bold, lighter, and bolder, but for this font bolder = bold so it doesnt really matter
+  white-space: nowrap;//indicates that there should be no text-wrapping for title
+  text-shadow: 2px 5px 4px #000000;
 
-  /* DIPLOMATA, use VER1
-  transform: scale(.6, 1);
-  font-family: 'Diplomata', cursive;
-  font-size:100px;
-  */
+/* DIPLOMATA, use VER1
+transform: scale(.6, 1);
+font-family: 'Diplomata', cursive;
+font-size:100px;
+*/
 
-  /* FI, use VER2
-  transform: scale(0.9, 1);
-  font-family: 'Fascinate Inline', cursive;
-  position: relative;
-  top:-40px;
-  font-size:100px;
-  */
-  
-  /* FRIJOLE, use VER2
-  font-family: 'Frijole', cursive;
-  position: relative;
-  top:-10px;
-  font-size:100px;
-  line-height:110px;
-  transform: scale(1, 1.2);
-  white-space: nowrap;
-  */
-  
-  /* NANUM PEN SCRIPT, use VER2
-  font-family: 'Nanum Pen Script', cursive;
-  transform: scale(1.5, 1.5);
-  line-height: 70px;
-  position: relative;
-  top:110px;
-  font-size:100px;
-  */
+/* FI, use VER2
+transform: scale(0.9, 1);
+font-family: 'Fascinate Inline', cursive;
+position: relative;
+top:-40px;
+font-size:100px;
+*/
 
-  /* RUSLAN DISPLAY, use VER2 */
-  font-family: 'Ruslan Display', cursive;
-  position: relative;
-  top:-70px;
-  line-height: 120px;
-  font-size:140px;
-  transform: scale(1, 1.1);
-  
-  
-  /* SNIGLET
-  font-family: 'Sniglet', cursive;
-  font-size:120px;
-  position: relative;
-  top: -120px;
-  */
+/* FRIJOLE, use VER2
+font-family: 'Frijole', cursive;
+position: relative;
+top:-10px;
+font-size:100px;
+line-height:110px;
+transform: scale(1, 1.2);
+white-space: nowrap;
+*/
 
-  /* SONSIE ONE
-  font-family: 'Sonsie One', cursive;
-  font-size:110px;
-  position: relative;
-  top: -100px;
-  */
+/* NANUM PEN SCRIPT, use VER2
+font-family: 'Nanum Pen Script', cursive;
+transform: scale(1.5, 1.5);
+line-height: 70px;
+position: relative;
+top:110px;
+font-size:100px;
+*/
+
+/* RUSLAN DISPLAY, use VER2 */
+font-family: 'Ruslan Display', cursive;
+position: relative; //sets position to be relative to the overlay div, AKA the background
+top:-70px;//offsets title upwards by 70px, should probably be edited after media query
+line-height: 120px;//space between lines
+font-size:140px;
+transform: scale(1, 1.1);//stretches title horizontally and vertically, respectively
+
+
+/* SNIGLET
+font-family: 'Sniglet', cursive;
+font-size:120px;
+position: relative;
+top: -120px;
+*/
+
+/* SONSIE ONE
+font-family: 'Sonsie One', cursive;
+font-size:110px;
+position: relative;
+top: -100px;
+*/
 }
 
 #meet p{
-    text-align:center;
-    color: #61c96c;
-    font-weight: 900;
-    white-space: nowrap;
+  text-align:center;
+  color: #61c96c;
+  font-weight: 900;
+  white-space: nowrap;
 
-    /* FRIJOLE, use VER2*/
-    font-family: 'Frijole', cursive;
-    position: relative;
-    font-size:100px;
-    line-height:110px;
-    transform: scale(1, 1.2);
+  /* FRIJOLE, use VER2*/
+  font-family: 'Frijole', cursive;
+  position: relative;
+  font-size:100px;
+  line-height:110px;
+  transform: scale(1, 1.2);
 }
 
-@media all and (max-width: 130vh) {  
-    // .title {  
-    //     font-size: var(--font1-sizeVH); 
-    // } 
-    #overlay{
-        background-size: 100vw;
-    }
-    .title{
-        font-size:12vw;
-        line-height:12vw;
-    }
+@media all and (max-width: 130vh) //essentially an "if x, then do y" statement. Once the window is HORIZONTALLY resized past x% of the viewport's INITIAL height (set in index.hmtl), you can set the styling for any div tags/classes to change to sum other shit
+{  
+  // .title {  
+  //     font-size: var(--font1-sizeVH); 
+  // } 
+  #overlay{
+      background-size: 100vw;
+  }
+  .title{
+      font-size:12vw;
+      line-height:12vw;
+  }
 }
 
 //Resize code
 /*
 body{
-  padding: 0;
-  margin:0;
+padding: 0;
+margin:0;
 }
 
 :root {
-    --ratio: 0.5;
-    --reverse-ratio: 2;
-    --container-width: 50vw;
-    --container-height: 50vh;
+  --ratio: 0.5;
+  --reverse-ratio: 2;
+  --container-width: 50vw;
+  --container-height: 50vh;
 
-    --font1-sizeVW: 15vh;
-    --font1-sizeVH: calc(var(--ratio) * 15vw);
+  --font1-sizeVW: 15vh;
+  --font1-sizeVH: calc(var(--ratio) * 15vw);
 
-    --font2-sizeVW: 6vh;
-    --font2-sizeVH: calc(var(--ratio) * 6vw);
+  --font2-sizeVW: 6vh;
+  --font2-sizeVH: calc(var(--ratio) * 6vw);
 }
 
 .one {
-  position: relative;
-  width: 20vw;
-  height: 20vw;
-  background-color: #76ccde;
-  float: left;
-  margin: auto;
-  border-bottom: 1px solid rgb(180,180,180);
-  padding: 4px;
-  box-sizing: border-box;
+position: relative;
+width: 20vw;
+height: 20vw;
+background-color: #76ccde;
+float: left;
+margin: auto;
+border-bottom: 1px solid rgb(180,180,180);
+padding: 4px;
+box-sizing: border-box;
 }
 
 #span1{
-  font-size: var(--font1-sizeVW); 
+font-size: var(--font1-sizeVW); 
 }
 
 .two {
-  width: 25vw;
-  height: 25vw;
-  background-color: #c976de;
-  float: left;
-  margin-left: 10px;
+width: 25vw;
+height: 25vw;
+background-color: #c976de;
+float: left;
+margin-left: 10px;
 }
 
 .three {
-  width: 30vw;
-  height: 30vw;
-  background-color: #a7de76;
-  float: left;
-  margin-left: 10px;
+width: 30vw;
+height: 30vw;
+background-color: #a7de76;
+float: left;
+margin-left: 10px;
 }
 
 //max-width: (reversRatio * 100vh) 
 @media all and (max-width: 200vh) {  
 
-    #container {
-        background-color: green;
-    }
+  #container {
+      background-color: green;
+  }
 
-    #span1 {  
-        font-size: var(--font1-sizeVH); 
-    } 
+  #span1 {  
+      font-size: var(--font1-sizeVH); 
+  } 
 }
 */

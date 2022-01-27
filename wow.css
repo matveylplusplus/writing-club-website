@@ -1,18 +1,18 @@
 body {
   margin: 0;
   /*
-    background-image: url(/code/images/Frame1.png);
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
-    background-size: 60%;
-    background-attachment: scroll;
-    overflow-y: scroll;
-    max-width: 600px;
-    max-height: 800px;
-    height: 100%;
-    margin: 0;
-    overflow-x: hidden;
-    */
+  background-image: url(/code/images/Frame1.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: 60%;
+  background-attachment: scroll;
+  overflow-y: scroll;
+  max-width: 600px;
+  max-height: 800px;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  */
 }
 
 #overlay {
@@ -34,38 +34,38 @@ body {
   text-align: center;
   left: 10px;
   color: #e2e2e2;
-  font-weight: 900;
+  font-weight: bolder;
   white-space: nowrap;
   text-shadow: 2px 5px 4px #000000;
   /* DIPLOMATA, use VER1
-  transform: scale(.6, 1);
-  font-family: 'Diplomata', cursive;
-  font-size:100px;
-  */
+transform: scale(.6, 1);
+font-family: 'Diplomata', cursive;
+font-size:100px;
+*/
   /* FI, use VER2
-  transform: scale(0.9, 1);
-  font-family: 'Fascinate Inline', cursive;
-  position: relative;
-  top:-40px;
-  font-size:100px;
-  */
+transform: scale(0.9, 1);
+font-family: 'Fascinate Inline', cursive;
+position: relative;
+top:-40px;
+font-size:100px;
+*/
   /* FRIJOLE, use VER2
-  font-family: 'Frijole', cursive;
-  position: relative;
-  top:-10px;
-  font-size:100px;
-  line-height:110px;
-  transform: scale(1, 1.2);
-  white-space: nowrap;
-  */
+font-family: 'Frijole', cursive;
+position: relative;
+top:-10px;
+font-size:100px;
+line-height:110px;
+transform: scale(1, 1.2);
+white-space: nowrap;
+*/
   /* NANUM PEN SCRIPT, use VER2
-  font-family: 'Nanum Pen Script', cursive;
-  transform: scale(1.5, 1.5);
-  line-height: 70px;
-  position: relative;
-  top:110px;
-  font-size:100px;
-  */
+font-family: 'Nanum Pen Script', cursive;
+transform: scale(1.5, 1.5);
+line-height: 70px;
+position: relative;
+top:110px;
+font-size:100px;
+*/
   /* RUSLAN DISPLAY, use VER2 */
   font-family: 'Ruslan Display', cursive;
   position: relative;
@@ -75,17 +75,17 @@ body {
   -webkit-transform: scale(1, 1.1);
           transform: scale(1, 1.1);
   /* SNIGLET
-  font-family: 'Sniglet', cursive;
-  font-size:120px;
-  position: relative;
-  top: -120px;
-  */
+font-family: 'Sniglet', cursive;
+font-size:120px;
+position: relative;
+top: -120px;
+*/
   /* SONSIE ONE
-  font-family: 'Sonsie One', cursive;
-  font-size:110px;
-  position: relative;
-  top: -100px;
-  */
+font-family: 'Sonsie One', cursive;
+font-size:110px;
+position: relative;
+top: -100px;
+*/
 }
 
 #meet p {
@@ -114,65 +114,65 @@ body {
 
 /*
 body{
-  padding: 0;
-  margin:0;
+padding: 0;
+margin:0;
 }
 
 :root {
-    --ratio: 0.5;
-    --reverse-ratio: 2;
-    --container-width: 50vw;
-    --container-height: 50vh;
+  --ratio: 0.5;
+  --reverse-ratio: 2;
+  --container-width: 50vw;
+  --container-height: 50vh;
 
-    --font1-sizeVW: 15vh;
-    --font1-sizeVH: calc(var(--ratio) * 15vw);
+  --font1-sizeVW: 15vh;
+  --font1-sizeVH: calc(var(--ratio) * 15vw);
 
-    --font2-sizeVW: 6vh;
-    --font2-sizeVH: calc(var(--ratio) * 6vw);
+  --font2-sizeVW: 6vh;
+  --font2-sizeVH: calc(var(--ratio) * 6vw);
 }
 
 .one {
-  position: relative;
-  width: 20vw;
-  height: 20vw;
-  background-color: #76ccde;
-  float: left;
-  margin: auto;
-  border-bottom: 1px solid rgb(180,180,180);
-  padding: 4px;
-  box-sizing: border-box;
+position: relative;
+width: 20vw;
+height: 20vw;
+background-color: #76ccde;
+float: left;
+margin: auto;
+border-bottom: 1px solid rgb(180,180,180);
+padding: 4px;
+box-sizing: border-box;
 }
 
 #span1{
-  font-size: var(--font1-sizeVW); 
+font-size: var(--font1-sizeVW); 
 }
 
 .two {
-  width: 25vw;
-  height: 25vw;
-  background-color: #c976de;
-  float: left;
-  margin-left: 10px;
+width: 25vw;
+height: 25vw;
+background-color: #c976de;
+float: left;
+margin-left: 10px;
 }
 
 .three {
-  width: 30vw;
-  height: 30vw;
-  background-color: #a7de76;
-  float: left;
-  margin-left: 10px;
+width: 30vw;
+height: 30vw;
+background-color: #a7de76;
+float: left;
+margin-left: 10px;
 }
 
 //max-width: (reversRatio * 100vh) 
 @media all and (max-width: 200vh) {  
 
-    #container {
-        background-color: green;
-    }
+  #container {
+      background-color: green;
+  }
 
-    #span1 {  
-        font-size: var(--font1-sizeVH); 
-    } 
+  #span1 {  
+      font-size: var(--font1-sizeVH); 
+  } 
 }
 */
 /*# sourceMappingURL=wow.css.map */
