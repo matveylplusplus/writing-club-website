@@ -81,7 +81,7 @@ font-size:100px;
   position: relative;
   top: -100px;
   line-height: 125px;
-  font-size: 170px;
+  font-size: clamp(6rem, 6vw, 9vw);
   -webkit-transform: scale(1, 1.1);
           transform: scale(1, 1.1);
   /* SNIGLET
@@ -112,24 +112,37 @@ top: -100px;
           transform: scale(1, 1.2);
 }
 
-@media all and (max-width: 1300px) {
-  .title {
+/*
+//adjust title size
+@media all and (max-width: 1300px) //essentially an "if x, then do y" statement. Once the window is HORIZONTALLY resized past x% of the viewport's INITIAL height (set in index.hmtl), you can set the styling for any div tags/classes to change to sum other shit
+{  
+  // .title {  
+  //     font-size: var(--font1-sizeVH); 
+  // } 
+  .title{
     color: black;
-    -webkit-transform: scale("1000vw", 1.1);
-            transform: scale("1000vw", 1.1);
+    transform: scale('1000vw', 1.1);
+    //font-size: 13vw; 
+    //top:-100px;
   }
 }
 
-@media all and (max-width: 850px) {
-  #overlay {
-    background-size: 100vw;
+//change to mobile screen and adjust both height and width from there
+@media all and (max-width: 850px) //essentially an "if x, then do y" statement. Once the window is HORIZONTALLY resized past x% of the viewport's INITIAL height (set in index.hmtl), you can set the styling for any div tags/classes to change to sum other shit
+{  
+  // .title {  
+  //     font-size: var(--font1-sizeVH); 
+  // } 
+  #overlay{
+      background-size: 100vw;
   }
-  .title {
-    font-size: 12vw;
-    line-height: 12vw;
+  .title{
+      font-size:12vw;
+      line-height:12vw;
   }
 }
 
+//Resize code
 /*
 body{
 padding: 0;
