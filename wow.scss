@@ -143,23 +143,34 @@ top: -100px;
   .title{
     color: black;
     font-size: calc(13vw);
+    top:-8vw;
     //font-size: 13vw;
     //top:-100px;
   }
 }
 
 //change to mobile screen and adjust both height and width from there
-@media all and (max-width: 850px) //essentially an "if x, then do y" statement. Once the window is HORIZONTALLY resized past x% of the viewport's INITIAL height (set in index.hmtl), you can set the styling for any div tags/classes to change to sum other shit
+@media all and (max-width: 835px) //essentially an "if x, then do y" statement. Once the window is HORIZONTALLY resized past x% of the viewport's INITIAL height (set in index.hmtl), you can set the styling for any div tags/classes to change to sum other shit
 {  
   // .title {  
   //     font-size: var(--font1-sizeVH); 
   // } 
   #overlay{
-      background-size: 100vw;
+      background-image: url(images/mobile.png);
+      image-rendering:pixelated;//gives the background that crispy anti-aliasing
+      background-repeat: no-repeat;//prevents background image from repeating when space is available
+      background-size:100%;//image has a width of 1920px so this essentially just covers the screen without background-size:cover.
+      //background-size: cover sucks because I don't want the "broad background" to adjust with window resize UNTIL it hits the certain point outlined in the media query below and goes into the "skinny background"
+      //text-align: center;
+      background-position: 51.2% 0%;//centers image to be at the center of the page even upon resize
+      overflow: hidden;//hides the scrollbar that would ordinarily pop up at the bottom of the screen; for some reason erasing this also makes a white block at the top. dunno why
+      //outline: 2px solid black;
+      width: 100%;//Sets width of div to occupy whole screen horizontally speaking; putting this under 100 would leave a blank space and over 100 would create horizontal scrollbars
+      height: calc(1020px + 61vw);//set to height of the background image so that scrolling down stops at the bottom of the image and not before or after it 
   }
   .title{
-      font-size:12vw;
-      line-height:12vw;
+      color: red;
+      
   }
 }
 

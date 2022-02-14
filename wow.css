@@ -117,16 +117,27 @@ top: -100px;
   .title {
     color: black;
     font-size: calc(13vw);
+    top: -8vw;
   }
 }
 
-@media all and (max-width: 850px) {
+@media all and (max-width: 835px) {
   #overlay {
-    background-size: 100vw;
+    background-image: url(images/mobile.png);
+    -ms-interpolation-mode: nearest-neighbor;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-pixelated;
+        image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 51.2% 0%;
+    overflow: hidden;
+    width: 100%;
+    height: calc(1020px + 61vw);
   }
   .title {
-    font-size: 12vw;
-    line-height: 12vw;
+    color: red;
   }
 }
 
