@@ -98,8 +98,9 @@ font-family: 'Ruslan Display', cursive;
 position: relative; //sets position to be relative to the overlay div, AKA the background
 top:-100px;//offsets title upwards by 70px, should probably be edited after media query
 line-height: 125px;//space between lines
-//font-size:170px;
-font-size: clamp(9vw, 1rem - 10vw, 2vw);
+font-size:170px;
+//font-size: clamp(3vw, 170px, 170px);
+border: 4px solid red;
 transform: scale(1, 1.1);//stretches title horizontally and vertically, respectively
 
 
@@ -113,7 +114,7 @@ top: -120px;
 /* SONSIE ONE
 font-family: 'Sonsie One', cursive;
 font-size:110px;
-position: relative;
+position: relative;4
 top: -100px;
 */
 }
@@ -132,7 +133,7 @@ top: -100px;
   transform: scale(1, 1.2);
 }
 
-/*
+
 //adjust title size
 @media all and (max-width: 1300px) //essentially an "if x, then do y" statement. Once the window is HORIZONTALLY resized past x% of the viewport's INITIAL height (set in index.hmtl), you can set the styling for any div tags/classes to change to sum other shit
 {  
@@ -141,8 +142,8 @@ top: -100px;
   // } 
   .title{
     color: black;
-    transform: scale('1000vw', 1.1);
-    //font-size: 13vw; 
+    font-size: calc(13vw);
+    //font-size: 13vw;
     //top:-100px;
   }
 }
